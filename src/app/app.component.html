@@ -1,0 +1,75 @@
+
+<div class="col-xs-8 added">
+  <div class="form-group">
+<h1>ADD ITEM</h1><br>
+    <mat-form-field>
+    <input matInput placeholder="TITLE" class="form-control"  name="title" [(ngModel)]="title" />
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+
+    <mat-form-field>
+    <input matInput placeholder="DESCRIPTION"  class="form-control"  name="description" [(ngModel)]="description" />
+    </mat-form-field>
+
+  </div>
+    <div class="form-group">
+
+    <button mat-raised-button class="btn btn-default" (click)="addItem(id, title, description, created_at, myDate)">Добавить</button>
+  </div>
+
+  <div>
+    <h1>_ _ _ _ _ _ _ _ </h1> <br>
+    <h1>SEARCH</h1><br>
+
+    <mat-form-field>
+      <input matInput placeholder="SEARCH FOR TITLE" id="myInput" class="form-control" onkeyup="myFunction()" [(ngModel)]="searchT" />
+    </mat-form-field><br><br>
+
+  <demo-datepicker-basic onkeyup="myFunction2()"></demo-datepicker-basic>
+
+
+    <br><br>
+
+  </div>
+</div>
+
+<div class="dobav">
+
+  <pagination-controls (pageChange)="i = $event" class="paginator"></pagination-controls>
+  <ul id="myUL">
+
+    <li *ngFor="let item of Items | paginate: { itemsPerPage: 6, currentPage: i} ; let i = index;" [class.selected]="item === selectedItem " >
+      <mat-card class="newItem">
+        <button mat-icon-button (click)="deleteItem(i)"><mat-icon>✖</mat-icon></button>
+        <h1 ><a>{{item.title}}</a> </h1><br>
+      <h3>{{item.description}}</h3><br>
+
+        <div class="data" id="data">Added:<a>{{item.created_at | date: 'MM/dd/yyyy'}}</a></div>
+
+
+
+      </mat-card>
+
+        <button mat-raised-button class="editButt" (click)="onSelect(item)" href="javascript:void(0)" onclick="showRes('result1')" id="resultbut">EDIT</button>
+    </li>
+
+  </ul>
+
+  <div *ngIf="selectedItem" class="edit" ng-show="show" id="result1">
+    <h1>EDIT ITEM</h1>
+
+    <h3 class="titul">TITLE:</h3>
+    <textarea [(ngModel)]="selectedItem.title" placeholder="title" class="tit"> </textarea><br><br>
+    <h3 class="descri">DESCRIPTION:</h3>
+    <textarea [(ngModel)]="selectedItem.description" placeholder="description" class="desc"></textarea><br><br>
+    <button mat-raised-button href="javascript:void(0)" onclick="showRes('result1')" id="resultbut">Save</button>
+  </div>
+
+
+
+
+</div>
+
+
+

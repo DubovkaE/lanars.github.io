@@ -1,0 +1,154 @@
+.blocks{
+  display: block;
+  margin-left: 200px;
+  margin-top: 100px;
+}
+.selected {
+  color:red;
+}
+.added{
+  float:left;
+  text-align: center;
+height: 100%;
+  border-right: 1px solid black;
+  padding: 10px;
+  width: 290px;
+  button{
+    margin-top: 10px;
+
+  }
+}
+.form-controls{
+  border: none;
+
+  width: 179px;
+  font-size: 16px;
+  border-bottom: 1px solid gray;
+}
+.edit{
+  margin-left: 15px;
+  text-align:left !important;
+  padding: 10px;
+  float: left;
+  color: black;
+  background-color: white;
+  width: 98%;
+  height: 98%;
+  position: absolute;
+  text-align: center;
+  margin-top: -19px;
+  .tit{
+    width: 200px;
+    height: 70px;
+  }
+  .desc {
+    width: 200px;
+    height: 70px;
+  }
+ textarea{
+
+   &:active,&:focus{
+     color: red;
+   }
+ }
+  button{
+
+    }
+  h1{
+
+  }
+ .titul{
+
+
+ }
+  .descri{
+
+  }
+}
+
+.paginator {
+
+  position: absolute;
+  margin-left: 271px;
+
+}
+
+button.calendar, button.calendar:active {
+  width: 2.75rem;
+  height: 20px;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAYAAAAEN20fAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEiJ7ZQxToVAEIY/YCHGxN6XGOIpnpaEsBSeQC9ArZbm9TZ6ADyBNzAhQGGl8Riv4BLAWAgmkpBYkH1b8FWT2WK/zJ8ZJ4qiI6XUI3ANnGKWBnht2/ZBDRK3hgVGNsCd7/ui+JkEIrKtqurLpEWaphd933+IyI3LEIdpCYCiKD6HcuOa/nwOa0ScJEnk0BJg0UTUWJRl6RxCYEzEmomsIlPU3IPW+grIAbquy+q6fluy/28RIBeRMwDXdXMgXLj/B2uimRXpui4D9sBeRLKl+1N+L+t6RwbWrZliTTTr1oxYtzVWiTQAcRxvTX+eJMnlUDaO1vpZRO5NS0x48sIwfPc87xg4B04MCzQi8hIEwe4bl1DnFMCN2zsAAAAASUVORK5CYII=') !important;
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: center;
+}
+.dobav{
+  position:absolute;
+  margin-left: 300px;
+
+  ul{margin-left: -38px;
+    li{
+      padding:20px;
+      list-style: none;
+      width: 200px;
+
+      float: left;
+      margin-right: 126px;
+      margin-top: 30px;
+
+    }
+  }
+}
+
+.newItem{
+  width: 300px;
+  height: 200px;
+
+  button{
+    display: block;
+
+
+    margin-left: 261px;
+
+
+  }
+
+  h1{
+    margin-top: -35px;
+    width: 249px;
+    position: absolute;
+    display: inline-block;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 2.4em; /* (Number of lines you want visible) * (line-height) */
+    line-height: 1.2em;
+    font-size:15px;
+    text-align:justify;
+  }
+  h3{
+    width: 299px;
+    font-size: 13px;
+    position: absolute;
+    display: inline-block;
+    word-wrap: break-word;
+    overflow: hidden;
+    word-spacing: -1px;
+    max-height: 4.7em; /* (Number of lines you want visible) * (line-height) */
+    line-height: 1.2em;
+    text-align:justify;
+
+    text-overflow: ellipsis;
+
+  }
+  .data {
+    position: absolute !important;
+    margin-top: 110px;
+  }
+}
+.editButt{
+  margin-top: -45px;
+  margin-left: 255px;
+  position: absolute;
+
+}
+
+

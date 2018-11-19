@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mytodolist</title>
+  <base href="/">
+  <script type='text/javascript'>
+    function showRes(result_id) {
+      var res = document.getElementById(result_id);
+      if (res.style.display == "none") {
+        res.style.display = "block";
+      } else {
+        res.style.display = "none";
+      };
+    };
+
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+
+
+    function myFunction2() {
+      // Declare variables
+      var input, filter, ul, li, div, i;
+      input = document.getElementById('myInput1');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[1];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css">
+  <link rel="stylesheet" type="text/css" href="/node_modules/primeicons/primeicons.css" />
+  <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/nova-light/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
